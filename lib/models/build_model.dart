@@ -4,22 +4,23 @@ class BuildModel {
 
   final programmes = ['Masters', 'Undergraduate', 'Diploma', 'Jupeb', 'Pre-Degree'];
   final faculties = {
-    'Masters': ['Faculty of Technology', 'Faculty of Engineering', 'Faculty of Science'],
-    'Undergraduate': ['Faculty of Technology', 'Faculty of Engineering'],
-    'Diploma': ['Faculty of Technology', 'Faculty of Engineering'],
+    'Masters': ['Faculty of Tech', 'Faculty of Eng', 'Faculty of Science'],
+    'Undergraduate': ['Faculty of BMS', 'Faculty of Agric', 'Faculty of Science'],
+    'Diploma': ['Faculty of Tech', 'Faculty of Eng', 'Faculty of Science'],
   };
 
   final departments = {
-    'Faculty of Technology': ['Computer Science', 'Software Engineering', 'Cyber Security', 'Data Science'],
-    'Faculty of Engineering': ['Building Eng', 'Chemical Eng', 'Mech Eng', 'Civil Eng'],
+    'Faculty of Tech': ['Computer Science', 'Software Engineering', 'Cyber Security', 'Data Science'],
+    'Faculty of Eng': ['Building Eng', 'Chemical Eng', 'Mech Eng', 'Civil Eng'],
+    'Faculty of Science': ['BCH', 'ICH', 'Geology', 'Geophysics'],
   };
 
-  final levels = ['100', '200', '300', '400', '500'];
+  final levels = ['Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5'];
 
   final students = {
-    'Quantum-100': ['Alice', 'Bob'],
-    'Quantum-200': ['Charlie'],
-    'Botany-100': ['David'],
+    'Year 1': ['Alice', 'Bob'],
+    'Year 2': ['Charlie'],
+    'Year 3': ['David'],
   };
 
 }
