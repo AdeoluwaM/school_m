@@ -29,36 +29,36 @@ class DepartmentPage extends StatelessWidget {
         ),
         elevation: 1,
       ),
-      body: Center(
-        child: Container(
-          padding: EdgeInsets.all(50),
-          child: GridView.builder(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 3,
-              mainAxisSpacing: 10,
-              crossAxisSpacing: 10,
-              childAspectRatio: 9 / 1.5,
-            ),
-            itemBuilder: (context, index) {
-              if (facultyDepartments.isEmpty) {
-                return SizedBox();
-              }
-              final department = facultyDepartments[index];
-              return CustomContainer(
-                cardName: department.toString(),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return Level();
-                      },
-                    ),
-                  );
-                },
-              );
-            },
+      body: Container(
+        padding: EdgeInsets.all(50),
+        child: GridView.builder(
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 3,
+            // crossAxisCount: (MediaQuery.of(context).size.width / 200).floor(),
+            mainAxisSpacing: 10,
+            crossAxisSpacing: 10,
+            childAspectRatio: 9 / 1.5,
           ),
+          itemCount: facultyDepartments.length,
+          itemBuilder: (context, index) {
+            if (facultyDepartments.length <= 3) {
+              return SizedBox();
+            }
+            final department = facultyDepartments[index];
+            return CustomContainer(
+              cardName: department.toString(),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return Level();
+                    },
+                  ),
+                );
+              },
+            );
+          },
         ),
       ),
     );

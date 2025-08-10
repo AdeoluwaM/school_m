@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:school_m/components/custom_container.dart';
 import 'package:school_m/models/build_model.dart';
+import 'package:school_m/views/student_list.dart';
 
 class Level extends StatelessWidget {
   const Level({super.key});
@@ -33,6 +34,7 @@ class Level extends StatelessWidget {
               mainAxisSpacing: 10,
               crossAxisSpacing: 10,
             ),
+            itemCount: BuildModel().levels.length,
             itemBuilder: (context, index) {
                 return CustomContainer(
                   cardName: BuildModel().levels[index],
@@ -41,7 +43,7 @@ class Level extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) {
-                          return Container();
+                          return StudentList();
                         },
                       ),
                     );
