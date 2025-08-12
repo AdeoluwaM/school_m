@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CustomContainer extends StatelessWidget {
-  CustomContainer({super.key, required this.cardName, required this.onTap});
+  const CustomContainer({super.key, required this.cardName, required this.onTap});
 
   final String cardName;
   final void Function()? onTap;
@@ -28,6 +28,7 @@ class CustomContainer extends StatelessWidget {
               fontSize: 24,
               fontWeight: FontWeight.bold,
             ),
+            textAlign: TextAlign.center,
           ),
         ),
       ),

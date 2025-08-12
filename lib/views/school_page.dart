@@ -36,6 +36,7 @@ class SchoolPage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 30),
+            //email and password field
             // proceed button
             CustomContainer(
               cardName: "Proceed",
