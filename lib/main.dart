@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:school_m/views/school_page.dart';
+import 'package:school_m/views/dashboard_page.dart';
+import 'package:school_m/views/test.dart';
 
 import 'color_scheme.dart';
 
@@ -14,7 +15,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SchoolPage(),
+      home: DashboardPage(),
+      // home: DropdownWithHint(),
       theme: colorScheme,
     );
   }

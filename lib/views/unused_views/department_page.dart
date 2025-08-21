@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:school_m/components/custom_container.dart';
 import 'package:school_m/models/build_model.dart';
-import 'package:school_m/views/level.dart';
+import 'package:school_m/views/unused_views/level.dart';
 
 class DepartmentPage extends StatelessWidget {
   const DepartmentPage({super.key, required this.faculties});

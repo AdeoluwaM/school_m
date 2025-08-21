@@ -17,6 +17,10 @@ class BuildModel {
 
   final levels = ['Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5'];
 
+  final sessions = ['2024/2025', '2023/2024', '2022/2023', '2021/2022', '2020/2019'];
+
+  final payments = ['Accommodation fee', 'School Fees', 'Acceptance Fee', 'Graduation Fee', 'Convocation Fee'];
+
   final students = {
     'Year 1': ['Alice', 'Bob'],
     'Year 2': ['Charlie'],

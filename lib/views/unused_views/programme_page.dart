@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:school_m/components/custom_container.dart';
 import 'package:school_m/models/build_model.dart';
-import 'package:school_m/views/student_list.dart';
+import 'package:school_m/views/unused_views/faculty_page.dart';
 
-class Level extends StatelessWidget {
-  const Level({super.key});
+class ProgrammePage extends StatelessWidget {
+  const ProgrammePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class Level extends StatelessWidget {
       appBar: AppBar(
         title: Center(
           child: Text(
-            'LEVEL',
+            'PROGRAMMES',
             style: GoogleFonts.notoSerif(
               color: Theme.of(context).colorScheme.primary,
               letterSpacing: 4,
@@ -28,27 +28,29 @@ class Level extends StatelessWidget {
         child: Container(
           padding: EdgeInsets.all(50),
           child: GridView.builder(
+            padding: EdgeInsets.all(12),
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 3,
-              childAspectRatio: 9 / 1.5,
               mainAxisSpacing: 10,
               crossAxisSpacing: 10,
+              childAspectRatio: 9 / 1.5,
             ),
-            itemCount: BuildModel().levels.length,
+            itemCount: BuildModel().programmes.length,
             itemBuilder: (context, index) {
-                return CustomContainer(
-                  cardName: BuildModel().levels[index],
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return StudentList();
-                        },
-                      ),
-                    );
-                  },
-                );
+              final programme = BuildModel().programmes[index];
+              return CustomContainer(
+                cardName: BuildModel().programmes[index].toString(),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return FacultyPage(programme: BuildModel().programmes[index].toString());
+                      },
+                    ),
+                  );
+                },
+              );
             },
           ),
         ),

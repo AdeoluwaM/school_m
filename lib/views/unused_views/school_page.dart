@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:school_m/views/programme_page.dart';
-import '../components/custom_container.dart';
+import 'package:school_m/views/unused_views/programme_page.dart';
+import '../../components/custom_container.dart';
 
 class SchoolPage extends StatelessWidget {
   const SchoolPage({super.key});
